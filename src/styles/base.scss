@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  appearance: none;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html {
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+html,
+body {
+  overscroll-behavior-y: none;
+}
+body {
+  min-height: 100vh;
+  background: #f9faff;
+}
+a {
+  text-decoration: none;
+}

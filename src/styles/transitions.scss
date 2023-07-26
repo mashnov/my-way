@@ -1,0 +1,51 @@
+.fade {
+  will-change: opacity;
+
+  &-enter {
+    &-active {
+      animation: fadeIn 0.3s $easing;
+    }
+  }
+  &-leave {
+    &-active {
+      animation: fadeIn 0.3s $easing reverse;
+    }
+  }
+}
+
+.bounce {
+  will-change: transform;
+
+  &-enter {
+    &-active {
+      animation: bounce-in 0.4s;
+    }
+  }
+  &-leave {
+    &-active {
+      animation: bounce-in 0.4s reverse;
+    }
+  }
+}
+
+.list {
+  will-change: transform;
+  &-enter {
+    &-active {
+      transition: all 0.5s $easing;
+    }
+    &-from {
+      opacity: 0;
+      transform: scale(1.1);
+    }
+  }
+  &-leave {
+    &-active {
+      transition: all 0.5s $easing;
+    }
+    &-to {
+      opacity: 0;
+      transform: scale(1);
+    }
+  }
+}
