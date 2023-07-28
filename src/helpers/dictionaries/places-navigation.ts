@@ -8,7 +8,7 @@ export const navigation = [
     label: 'Place List',
   },
   {
-    theme: Themes.GREEN,
+    theme: Themes.ORANGE,
     name: Names.PLACES_ADD,
     label: 'Add New Place',
   },

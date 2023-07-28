@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, computed } from 'vue'
+import { computed, onBeforeMount } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth/store'
 import { useProfileStore } from '@/stores/profile/store'
@@ -42,7 +42,7 @@ const submitClickHandler = async () => {
   await router.push({ name: Names.AUTH_LOGIN })
 }
 
-onMounted(() => {
+onBeforeMount(() => {
   submitClickHandler()
 })
 </script>

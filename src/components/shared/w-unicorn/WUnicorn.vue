@@ -33,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+import { ref, computed, onBeforeMount, onBeforeUnmount } from 'vue'
 import { getRandomNumber } from '@/helpers/functions/number'
 
 import WUnicornEye from './WUnicornEye.vue'
@@ -83,7 +83,7 @@ const setRightLegTransformValue = () => {
 }
 
 
-onMounted(() => {
+onBeforeMount(() => {
   headInterval.value = setInterval(() => {
     setHeadTransformValue()
   }, HEAD_INTERVAL_VALUE)

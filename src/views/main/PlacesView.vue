@@ -6,11 +6,9 @@
     </template>
     <template v-else>
       <WDivider :text="routesFormLabel" />
-      <WFormWrapper>
-        <WTransition appear>
-          <Component :is="routesFormComponent" />
-        </WTransition>
-      </WFormWrapper>
+      <WTransition appear>
+        <Component :is="routesFormComponent" />
+      </WTransition>
     </template>
   </div>
 </template>
@@ -24,7 +22,6 @@ import WDivider from '@/components/shared/w-divider/WDivider.vue'
 import WTransition from '@/components/shared/w-transition/WTransition.vue'
 import WSubNavigation from '@/components/shared/w-sub-navigation/WSubNavigation.vue'
 import WRouterView from '@/components/shared/w-router-view/WRouterView.vue'
-import WFormWrapper from '@/components/shared/w-form-wrapper/WFormWrapper.vue'
 
 const props = defineProps<{
   name: Names
@@ -35,11 +32,11 @@ const isNavigation = computed(() => Names.PLACES === props.name)
 const routesFormLabel = computed(() => {
   switch (props.name) {
     case Names.PLACES_LIST:
-      return 'Places list'
+      return 'Place list'
     case Names.PLACES_DETAILS:
-      return 'Places Details'
+      return 'Place Details'
     case Names.PLACES_ADD:
-      return 'New Places'
+      return 'New Place'
     default:
       return ''
   }

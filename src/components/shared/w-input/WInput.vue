@@ -38,7 +38,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { Events, Modes, Types } from '@/helpers/enum/w-input'
 
 import WLabel from '@/components/shared/w-label/WLabel.vue'

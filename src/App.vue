@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { ref, computed, onBeforeMount } from 'vue'
 import { useEventListener } from '@vueuse/core'
 import { useAuthStore } from '@/stores/auth/store'
 import { useProfileStore } from '@/stores/profile/store'
@@ -22,16 +22,16 @@ const appIsReady = ref(false)
 const isAuthed = computed(() => authStore?.isAuthed)
 const emailVerified = computed(() => profileStore?.emailVerified)
 
-onMounted(() => {
-  firebaseInit(() => {
-    appIsReady.value = true
-  })
-})
-
 useEventListener(window, 'focus', () => {
   if (isAuthed.value && !emailVerified.value) {
     profileStore?.getProfileAction()
   }
+})
+
+onBeforeMount(() => {
+  firebaseInit(() => {
+    appIsReady.value = true
+  })
 })
 </script>
 

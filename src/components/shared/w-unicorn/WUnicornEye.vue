@@ -11,19 +11,19 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue'
-
-const htmlElement = ref()
-const mousePositionX = ref(0)
-const mousePositionY = ref(0)
-const eyeCenterOffsetX = ref(0)
-const eyeCenterOffsetY = ref(0)
+import { ref, computed, watch, onBeforeMount, onBeforeUnmount } from 'vue'
 
 type PropTypes = {
   correction: number
 }
 
 const props = defineProps<PropTypes>()
+
+const htmlElement = ref()
+const mousePositionX = ref(0)
+const mousePositionY = ref(0)
+const eyeCenterOffsetX = ref(0)
+const eyeCenterOffsetY = ref(0)
 
 const pupilTransformStyle = computed(() => {
   const radValue = mousePositionY.value < 0 ? Math.PI / 4 : (7 * Math.PI) / 2.15
@@ -66,7 +66,7 @@ watch(() => props.correction, () => {
   setEyeCenterOffset()
 })
 
-onMounted(() => {
+onBeforeMount(() => {
   addMouseMoveListener()
   setEyeCenterOffset()
 })

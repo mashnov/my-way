@@ -32,7 +32,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, defineAsyncComponent, ref } from 'vue'
+import { ref, computed, defineAsyncComponent } from 'vue'
 import { useRoute } from 'vue-router'
 import { useAuthStore } from '@/stores/auth/store'
 import { useProfileStore } from '@/stores/profile/store'

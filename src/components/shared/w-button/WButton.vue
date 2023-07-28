@@ -124,7 +124,7 @@ const buttonClickHandler = () => {
         align-items: center;
         white-space: nowrap;
         line-height: 24px;
-        font-size: 18px;
+        font-size: 14px;
         font-weight: 500;
         color: var(--color);
         text-transform: uppercase;

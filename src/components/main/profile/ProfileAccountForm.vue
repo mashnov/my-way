@@ -62,7 +62,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onBeforeMount } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth/store'
 import { useProfileStore } from '@/stores/profile/store'
@@ -128,10 +128,11 @@ const deleteProfileHandler = async () => {
   if (!profileResponse.success) {
     return
   }
+  // todo: notification
   await router.push({ name: Names.AUTH_LOGOUT })
 }
 
-onMounted(() => {
+onBeforeMount(() => {
   userName.value = userNameValue.value || ''
   userLogo.value = userLogoValue.value || ''
 })

@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted } from 'vue'
+import { computed, onBeforeMount } from 'vue'
 import { useAuthStore } from '@/stores/auth/store'
 import { useProfileStore } from '@/stores/profile/store'
 import { navigation } from '@/helpers/dictionaries/main-navigation'
@@ -37,7 +37,7 @@ const authHandler = async () => {
   }
 }
 
-onMounted(() => {
+onBeforeMount(() => {
   authHandler()
 })
 </script>

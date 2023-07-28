@@ -3,7 +3,7 @@ import { Themes } from '@/helpers/enum/w-sub-navigation'
 
 export const navigation = [
   {
-    theme: Themes.BLUE,
+    theme: Themes.GREEN,
     name: Names.ROUTES_LIST,
     label: 'Route List',
   },

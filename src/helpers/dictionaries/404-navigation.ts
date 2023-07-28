@@ -27,12 +27,12 @@ export const authorizedNavigation = [
   },
   {
     theme: Themes.GREEN,
-    name: Names.ROUTES,
-    label: 'Routes',
+    name: Names.PLACES,
+    label: 'Places',
   },
   {
     theme: Themes.BLUE,
-    name: Names.VIEWER,
-    label: 'Map viewer',
+    name: Names.ROUTES,
+    label: 'Routes',
   },
 ]

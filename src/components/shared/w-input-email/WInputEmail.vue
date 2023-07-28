@@ -43,7 +43,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
+import { ref, computed, watch } from 'vue'
 import { emailValidator } from '@/helpers/functions/string'
 import { Types, Modes, Events } from '@/helpers/enum/w-input'
 

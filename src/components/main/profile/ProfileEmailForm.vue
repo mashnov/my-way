@@ -51,7 +51,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, computed, ref } from 'vue'
+import { ref, computed, onBeforeMount } from 'vue'
 import { useAuthStore } from '@/stores/auth/store'
 import { useProfileStore } from '@/stores/profile/store'
 import { Themes } from '@/helpers/enum/w-button'
@@ -116,7 +116,7 @@ const confirmClickHandler = async () => {
   // todo: notification
 }
 
-onMounted(() => {
+onBeforeMount(() => {
   email.value = userEmailValue.value || ''
 })
 </script>
